@@ -1,85 +1,43 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <style>
+      body {
+        background-color: rgb(208, 226, 238);
+      }
+    </style>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-      h1 {
-        text-align: center;
-      }
-      form {
-        border: 2px solid black;
-        text-align: center;
-        padding: 20px;
-        border-radius: 10px;
-        margin: 10px;
-      }
-      .btn {
-        width: 100px;
-        padding: 10px;
-        border-radius: 10px;
-        font-weight: bold;
-      }
-    </style>
   </head>
-  <body bgcolor="lightblue">
-    <h1>Marathon Registration</h1>
-    <form>
-      <label> Firstname: </label>
-      <input type="text" name="firstname" size="15" /> <br />
-      <br />
-      <label> Middlename: </label>
-      <input type="text" name="middlename" size="15" /> <br />
-      <br />
-      <label> Lastname: </label>
-      <input type="text" name="lastname" size="15" /> <br />
-      <br />
-
-      <label> Track : </label>
-      <select>
-        <option value="100">100m</option>
-        <option value="200">200m</option>
-        <option value="300">300m</option>
-        <option value="400">400m</option>
-        <option value="500">500m</option>
-        <option value="1000">1000m</option>
-      </select>
-
-      <br />
-      <br />
-      <label> Gender : </label>
-      <select>
-        <option value="Male">Male</option>
-        <option value="Female">Female</option>
-        <option value="Others">Others</option>
-      </select>
-
-      <br />
-      <br/ >
-
-      <label> Phone : </label>
-      <input type="text" name="country code" value="+91" size="2" />
-      <input type="text" name="phone" size="10" /> <br />
-      <br />
-      Address
-      <br />
-      <textarea cols="50" rows="5" value="address"> </textarea>
-      <br />
-      <br />
-      Email:
-      <input type="email" id="email" name="email" /> <br />
-      <br />
-      <br />
-      Password:
-      <input type="Password" id="pass" name="pass" /> <br />
-      <br />
-      <br />
-      Re-type password:
-      <input type="Password" id="repass" name="repass" /> <br />
-      <br />
-      <input type="button" value="Submit" class="btn" />
+  <body>
+    <h1><center>Registration Form</center></h1>
+    <form action="">
+      <label for="name">Name:</label>
+      <input
+        type="text"
+        id="name"
+        placeholder="Enter your name"
+        required
+      /><br /><br />
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        placeholder="Enter your mail"
+      /><br /><br />
+      <label for="qualification">Qualification:</label>
+      <input
+        type="qualification"
+        id="qualification"
+        placeholder="Enter your 
+qualification"
+      /><br /><br />
+      <label for="age">Age:</label>
+      <input type="age" id="age" placeholder="Enter your Age" /><br /><br />
+      <input type="submit" />
     </form>
   </body>
 </html>
