@@ -180,7 +180,7 @@ def ticketagentassigned(ticket_id):
     agent = users[0]
 
     sg = sendgrid.SendGridAPIClient(
-        api_key="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")
+        api_key="")
     from_email = Email("tenalikarthikeya67@gmail.com")
     to_email = To(user.Email)
     subject = "Customer Care Agent Assigned Notification"
@@ -215,7 +215,7 @@ def ticketclose(ticket_id):
     users = user.get()
     user = users[0]
     sg = sendgrid.SendGridAPIClient(
-        api_key="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")
+        api_key="")
     from_email = Email("tenalikarthikeya67@gmail.com")
     to_email = To(user["EMAIL"])
     subject = "Customer Care Ticket Closed Notification"
