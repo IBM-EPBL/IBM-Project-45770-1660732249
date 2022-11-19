@@ -1,13 +1,15 @@
 # This is a sample Python script.
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-import ibm_db
-from flask import Flask, render_template, request, redirect, url_for, flash, session
-from ticket.User import User
+
+
 from ticket.Ticket import Ticket
 import sendgrid
+import ibm_db
 import os
 from sendgrid.helpers.mail import *
+from flask import Flask, render_template, request, redirect, url_for, flash, session
+from ticket.User import User
 
 app = Flask(__name__)
 app.secret_key = b'_4#z2G"F5Q9z\n\xec]/'
@@ -183,7 +185,7 @@ def ticketagentassigned(ticket_id):
     agent = users[0]
 
     sg = sendgrid.SendGridAPIClient(
-        api_key="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")
+        api_key="")
     from_email = Email("tenalikarthikeya67@gmail.com")
     to_email = To(user.Email)
     subject = "Customer Care Agent Assigned Notification"
@@ -218,7 +220,7 @@ def ticketclose(ticket_id):
     users = user.get()
     user = users[0]
     sg = sendgrid.SendGridAPIClient(
-        api_key="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")
+        api_key="")
     from_email = Email("tenalikarthikeya67@gmail.com")
     to_email = To(user["EMAIL"])
     subject = "Customer Care Ticket Closed Notification"
